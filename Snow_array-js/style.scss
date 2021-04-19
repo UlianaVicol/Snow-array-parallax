@@ -1,0 +1,42 @@
+.bg-sky{
+    background-image: url(img/bg-sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -15%;
+    filter: brightness(120%) contrast(100%);
+    //overflow: hidden;
+}
+.moon{
+    background-image: url(img/moon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: -70%;
+    right: 0;
+    filter: brightness(80%) contrast(200%);
+}
+.mountain-bg{
+    background-image: url(img/mountain.png);
+    background-repeat: no-repeat;
+
+    top: 300%;
+    background-attachment: absolute;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height: 100vh;
+    filter: brightness(70%) contrast(200%);
+}
+.road-trip{
+    background-image:
+    linear-gradient(to top, #1f79be57, rgba(66, 63, 63, 0.068)), 
+    url(img/road.png);
+    top: 350%;
+    background-attachment: absolute;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height: 100vh;
+    filter: brightness(60%) contrast(160%);
+   
+}

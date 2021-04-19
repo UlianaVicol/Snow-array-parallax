@@ -1,0 +1,76 @@
+$flakeLayerColor: #457;
+$flakeColor: #fff;
+$flakeSize: 5px;
+$fallDuration: 20s;
+
+body{
+    //overflow: hidden;
+    background-color: $flakeLayerColor;
+}
+
+.flake-layer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    .flake{
+        
+        
+        border-radius: $flakeSize;
+        position: absolute;
+        top: -$flakeSize * 2;
+        left: 1% * random(100);
+        animation: fall $fallDuration linear  infinite;
+        @keyframes fall{
+            from{
+                top: -$flakeSize * 2;
+            }
+            to{
+                top: 100%;
+            }
+        }
+        // big 
+        @media (min-width: 1001px) {
+        $count: 100;
+        @for $n from 1 through $count {
+            &:nth-child(#{$n}) {
+                left: 1% * random(100);
+                animation-delay: $fallDuration * random();
+                $sizeK: 0.5 + random(); // 0.1...1.1
+
+                animation-duration: $fallDuration * 1 / $sizeK;
+
+               
+                width: $flakeSize * $sizeK;
+                height: $flakeSize * $sizeK;
+
+                background-color: lighten($flakeColor, $sizeK * 45%);
+            }
+        }
+    }
+        //small 
+        @media (max-width: 1000px){
+        $count: 10;
+        @for $n from 1 through $count {
+            &:nth-child(#{$n}) {
+                left: 1% * random(100);
+                animation-delay: $fallDuration * random();
+                $sizeK: 0.5 + random(); // 0.1...1.1
+
+                animation-duration: $fallDuration * 1 / $sizeK;
+
+               
+                width: $flakeSize * $sizeK;
+                height: $flakeSize * $sizeK;
+
+                background-color: lighten($flakeColor, $sizeK * 45%);
+            }
+        }
+        }
+
+    }
+       
+}

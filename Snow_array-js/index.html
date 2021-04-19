@@ -1,0 +1,285 @@
+<!--
+    HW1*: IPROVIZE !!!
+    1. finish navbar - horizontal + brand
+    2. reviews -> carousel -> reviews
+    3. apply - packages / form
+    --->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter SCSS and Parallax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="snow.css">
+    <link rel="stylesheet" href="parallax.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sections.css">
+    <link rel="stylesheet" href="flake.css">
+</head>
+
+<body>
+
+   
+    <div id="nav" class="nav">
+        <div class="icon">
+            <ul>
+                <li>
+                    <a title="Home" href="#presentation"><i class="fa fa-home "></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa fa-search "></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa fa-edit "></i></a>
+                </li>
+            </ul>
+            </div>
+            <div class="text">
+                <ul>
+                    <li>
+                        <a title="Home" href="#presentation">White Snow TOUR!!</a>
+                    </li>
+                    <li>
+                        <a href="#reviews" >Who Went?</a>
+                    </li>
+                    <li>
+                        <a href="#apply" >Take the Tour!!!</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="info">
+                <div class="logo"><p><i class="fas fa-skiing"></i>LOGO</p></div>
+                <div class="name">SKI TOUR</div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+    <section id="presentation" class="section">
+       <h1>Amazing Ski Tour in SNOW!!!</h1>
+       <img src="img/skiing.png" alt="">
+        <a href="#apply">TAKE THE TOUR!</a>
+    </section>
+    <section id="reviews" class="section">
+        <h1>reviws</h1>
+        <div class="container">
+            <div id="slider" class="owl-carousel">
+                <div class="content-area">
+                    <div class="content">
+                        <div class="img-area"><img src="img/avatar.png" alt="avatar"></div>
+                        <h2>Someone Else</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, voluptatem!</p>
+                        <p class="socials">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-carousel">
+            <div id="slider" class="owl-carousel">
+                <div class="content-slider">
+                    <div class="content">
+                        <div class="img-area"><img src="img/avatar.png" alt="avatar"></div>
+                        <h2>Someone Else</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, voluptatem!</p>
+                        <p class="socials">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-carousel">
+            <div id="slider" class="owl-carousel">
+                <div class="content-slider">
+                    <div class="content">
+                        <div class="img-area"><img src="img/avatar.png" alt="avatar"></div>
+                        <h2>Someone Else</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, voluptatem!</p>
+                        <p class="social">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                        </p>
+                    </div>
+                <div>
+            </div>
+        </div>
+        <div class="container-carousel">
+            <div id="slider" class="owl-carousel">
+                <div class="content-slider">
+                    <div class="content">
+                        <div class="img-area"><img src="img/avatar.png" alt="avatar"></div>
+                        <h2>Someone Else</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, voluptatem!</p>
+                        <p class="socials">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="apply" class="section">
+        <form action="page-thankyou.html" target="_blank">
+            <h1>Apply</h1>
+            <fieldset>
+                <label for="name"><i class="fas fa-key"></i> Rooms</label>
+                <input type="number" name="bday" id="number" placeholder="1 room" class="form-control" min="1" max="31" required>
+                <label for="name"><i class="fas fa-user"></i> Adults</label>
+                <input type="number" name="byear" id="byear" placeholder="2 aduls" class="form-control" min="1" max="31" required>
+                <label for="name"><i class="fas fa-user"> </i>Children 1-11 yrs</label>
+                <input type="number" name="byear" id="byear" placeholder="0 children" class="form-control" min="1" max="31" required>
+            </fieldset>
+            <button type="submit">GO</button>
+        </form>
+    </section>
+    <div id="snowContainer" onclick="clickStop()">
+        <canvas id="canvas"></canvas>
+            </div>
+    <!--<div class="flake-layer">
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+        <div class="flake"></div>
+    </div>-->
+        <div class="layer layer-1"></div>
+        <div class="layer layer-2 road-trip"></div>
+        <div class="layer layer-3  moon"></div>
+        <div class="layer layer-4 mountain-bg"></div>
+        <div class="layer layer-5 bg-sky"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script src="flake.js"></script>
+    <script>
+        $('#slider').owlCarousel({
+            loop:true,
+            margin:15,
+            nav:false,
+            autoplay:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:3
+                }
+            }
+        })
+    </script>
+</body>
+</html>
